@@ -2,11 +2,15 @@ import "./Cubo.css"
 
 const Cubo = (props) => {
 
+
+
     return (
 
-        <div className="caixa">
+        <button className="caixa" onClick={(event) => {
+            props.handleClick(props.col, props.line, props.player)
+        }}>
             {props.marker}
-        </div>
+        </button>
     )
 }
 
