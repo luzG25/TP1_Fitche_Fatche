@@ -7,10 +7,31 @@
     <title>Vite + React</title>
   </head>
   <body>
+    
     <Header>
       <img src="./src/assets/fitche_fatche/game-logo.png" alt="Logo">
     </Header>
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
+    <style>
+      
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;     /* Centraliza horizontalmente */
+        align-items: center;         /* Centraliza verticalmente */
+        /*background-color: #f5f5f5;   /* Cor de fundo opcional */
+        font-family: Arial, sans-serif; /* Fonte padrão */
+      }
+
+
+      Header img {
+        width: 75px;                    /* Largura da imagem */
+        height: 75px;                   /* Altura da imagem */
+        object-fit: contain;            /* Garante que a imagem se ajuste sem distorção */
+      }
+    </style>
   </body>
 </html>

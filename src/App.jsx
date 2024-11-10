@@ -2,11 +2,21 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import JogadoresBoard from './components/JogadoresBoard'
+import Tabuleiro from './components/Tabuleiro'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
+    <div className='app'>
+        <JogadoresBoard/>
+        <Tabuleiro/>
+    </div>
+ 
+  )
+
+  /*return (
     <>
 
   
@@ -31,7 +41,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </> 
-  )
+  )*/
 }
 
 export default App
