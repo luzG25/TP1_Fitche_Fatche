@@ -6,12 +6,13 @@ import JogadoresBoard from './components/JogadoresBoard'
 import Tabuleiro from './components/Tabuleiro'
 
 function App() {
-  
 
+  const [player, setPlayer] = useState("X")
+   
   return (
     <div className='app'>
-        <JogadoresBoard/>
-        <Tabuleiro/>
+        <JogadoresBoard player={player}/>
+        <Tabuleiro player={player} setPlayer={setPlayer}/>
     </div>
  
   )

@@ -1,13 +1,17 @@
 import NameBoard from "./NameBoard"
 import "./JogadoresBoard.css"
 
-function JogadoresBoard() {
-    
+function JogadoresBoard(props) {
+
+
+
+    let player1Class = props.player === "X" ? "nameBoard thisPlayer" : "nameBoard"
+    let player2Class = props.player === "O" ? "nameBoard thisPlayer" : "nameBoard"    
 
     return (
         <div className="jogadoresBoard">
-            <NameBoard className="nameBoard" name={"Jogador 1"}/>
-            <NameBoard className="nameBoard"  name={"Jogador 2"}/>
+            <NameBoard className={player1Class} name={"Jogador 1"}/>
+            <NameBoard className={player2Class}  name={"Jogador 2"}/>
         </div>
     )
 }

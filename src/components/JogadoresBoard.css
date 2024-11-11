@@ -14,3 +14,7 @@
     text-align: center;
     
   }
+
+  .thisPlayer {
+    border: 2.5px solid #ff3300;
+  }
