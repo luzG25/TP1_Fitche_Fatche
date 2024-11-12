@@ -2,16 +2,9 @@ import Cubo from "./cubo"
 import "./Cubo.css" 
 import { useState } from 'react'
 
-function Tabuleiro(props)
+function Tabuleiro({tab, setTab, setTabCheio,...props})
 {
-    let tabuleiro = [
-        [[""], [""], [""]],
-        [[""], [""], [""]], 
-        [[""], [""], [""]]
-    ]
-
-    const [tab, setTab] = useState(tabuleiro)
-    
+   
     function validarTab(){
         /*
         [00,01,02]
@@ -20,11 +13,12 @@ function Tabuleiro(props)
         */ 
 
         let player = props.player === "X" ? "O" : "X"
+        let tabCheio = true
+        
 
         function winner()
         {
-            let winPlayer = player === "X" ? "Jogador 1" : "Jogador 2"
-            alert(winPlayer + " Ganhou a partida")
+            props.setWin(true)
             
         }
 
@@ -46,8 +40,19 @@ function Tabuleiro(props)
             else if (tab[0][i] === player && tab[1][i] === player && tab[2][i] === player)
                 winner()
 
+            //verificar tabuleiro cheio
+            for (let j=0; j<3; j++){
+                if (tab[i][j] == "") 
+                    tabCheio = false
+            }
+
         }
+
+        //implementar resposta de tabuleiro cheio
+        if (tabCheio) setTabCheio(true)
     }
+
+
 
     function handleClick(col, line, player){
         let Ntab = [...tab]
