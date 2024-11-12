@@ -3,9 +3,17 @@
 function NameBoard(props)
 {
     return (
-        <div className={props.className}>
-            {props.name}
+        <div>
+            <div className={props.className}>
+                <p className="name">
+                    {props.name}  
+                </p>
+                <p className="sign">
+                    {props.sign}
+                </p>
+            </div>
         </div>
+        
     )
 }
 

@@ -57,7 +57,7 @@ function Tabuleiro({tab, setTab, setTabCheio,...props})
     function handleClick(col, line, player){
         let Ntab = [...tab]
         Ntab[line][col] = player
-        console.log(...Ntab)
+        //console.log(...Ntab)
         setTab(Ntab)
         props.setPlayer(props.player === "X" ? "O" : "X")
     }

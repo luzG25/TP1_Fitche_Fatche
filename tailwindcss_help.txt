@@ -1,0 +1,21 @@
+
+PARA INSTALAR O TAILWINDCSS
+    
+    npm install tailwindcss postcss autoprefixer
+
+    npx tailwindcss init -p
+
+CONFIGURAR O FICHEIRO: tailwindcss.config.js
+    
+    content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    ],
+
+
+NO ARQUIVO .css PRICIPAL COLOCAR:
+
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+

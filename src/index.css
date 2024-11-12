@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   line-height: 1.5;
   font-weight: 400;
@@ -12,8 +16,19 @@
 
 body {
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;     /* Centraliza horizontalmente */
+  align-items: center;         /* Centraliza verticalmente */
+  font-family: Arial, sans-serif; 
   background-image: url('assets/fitche_fatche/bg-pattern-dark.png');
 
+}
+
+Header img {
+  width: 75px;                    /* Largura da imagem */
+  height: 75px;                   /* Altura da imagem */
+  object-fit: contain;            /*imagem se ajuste sem distorção */
 }
 
 

@@ -4,6 +4,7 @@
   }
   
   .nameBoard {
+    display: flex;
     background-color: lightblue;
     padding: 10px;
     border: 2px solid #ccc;
@@ -12,7 +13,17 @@
     margin-bottom: 20px;
     width: 200px;
     text-align: center;
-    
+    justify-content: space-between;
+    align-items: center; 
+    /*font-size: 20px;   */
+  }
+
+  .name{
+    margin-left: 20px;
+  }
+
+  .sign{
+    margin-right: 10px;
   }
 
   .thisPlayer {

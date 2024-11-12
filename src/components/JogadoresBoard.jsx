@@ -10,8 +10,8 @@ function JogadoresBoard(props) {
 
     return (
         <div className="jogadoresBoard">
-            <NameBoard className={player1Class} name={"Jogador 1"}/>
-            <NameBoard className={player2Class}  name={"Jogador 2"}/>
+            <NameBoard className={player1Class} name={"Jogador 1"} sign={"X"}/>
+            <NameBoard className={player2Class}  name={"Jogador 2"} sign={"O"}/>
         </div>
     )
 }
