@@ -1,8 +1,7 @@
 import NameBoard from "./NameBoard"
 import "./JogadoresBoard.css"
 
-function JogadoresBoard(props) {
-
+function JogadoresBoard({players, setPlayers, ...props}) {
 
 
     let player1Class = props.player === "X" ? "nameBoard thisPlayer" : "nameBoard"
@@ -10,8 +9,8 @@ function JogadoresBoard(props) {
 
     return (
         <div className="jogadoresBoard">
-            <NameBoard className={player1Class} name={"Jogador 1"} sign={"X"}/>
-            <NameBoard className={player2Class}  name={"Jogador 2"} sign={"O"}/>
+            <NameBoard className={player1Class} index={0} players={players} setPlayers={setPlayers}/>
+            <NameBoard className={player2Class} index={1} players={players} setPlayers={setPlayers}/>
         </div>
     )
 }

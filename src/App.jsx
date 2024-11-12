@@ -8,17 +8,22 @@ import TabCheio from './components/TabCheio'
 
 function App() {
 
+
   let tabuleiro = [
     [[""], [""], [""]],
     [[""], [""], [""]], 
     [[""], [""], [""]]
   ]
 
+  const [players, setPlayers] = useState([
+    {"nome": "Jogador 1", "sign": "X"},
+    {"nome": "Jogador 2", "sign": "O"}
+  ])
   const [tab, setTab] = useState(tabuleiro)
   const [player, setPlayer] = useState("X")
   const [win, setWin] = useState(false)
   const [tabCheio, setTabCheio] = useState(false)
-  
+
 
   function resetarTabuleiro() {
     setTab(tabuleiro)
@@ -29,7 +34,7 @@ function App() {
    
   return (
     <div className='app'>
-        <JogadoresBoard player={player}/>
+        <JogadoresBoard player={player} players={players} setPlayers={setPlayers}/>
         <Tabuleiro player={player} setPlayer={setPlayer} setWin={setWin} tab={tab} setTab={setTab} setTabCheio={setTabCheio}/>
         
         {

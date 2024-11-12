@@ -1,15 +1,15 @@
 
 
-function NameBoard(props)
+function NameBoard({players, index, setPlayers, ...props})
 {
     return (
         <div>
             <div className={props.className}>
                 <p className="name">
-                    {props.name}  
+                    {players[index].nome}  
                 </p>
                 <p className="sign">
-                    {props.sign}
+                    {players[index].sign}
                 </p>
             </div>
         </div>
