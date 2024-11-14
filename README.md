@@ -40,10 +40,10 @@
 <h2>🗂️ How to Run the Project</h2>
 <ol>
     <li>Clone the repository:
-        <pre><code>git clone https://github.com/your-username/fitche-fatche-react.git</code></pre>
+        <pre><code>git clone https://github.com/luzG25/TP1_Fitche_Fatche.git</code></pre>
     </li>
     <li>Navigate to the project directory:
-        <pre><code>cd fitche-fatche-react</code></pre>
+        <pre><code>cd TP1_Fitche_Fatche</code></pre>
     </li>
     <li>Install the dependencies:
         <pre><code>npm install</code></pre>
