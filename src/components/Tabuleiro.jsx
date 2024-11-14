@@ -54,11 +54,14 @@ function Tabuleiro({tab, setTab, setTabCheio,...props})
 
 
     function handleClick(col, line, player){
-        let Ntab = [...tab]
-        Ntab[line][col] = player
-        //console.log(...Ntab)
-        setTab(Ntab)
-        props.setPlayer(props.player === "X" ? "O" : "X")
+        if (tab[line][col] !== "X" && tab[line][col] !== "O"){
+            let Ntab = [...tab]
+            Ntab[line][col] = player
+            //console.log(...Ntab)
+            setTab(Ntab)
+            props.setPlayer(props.player === "X" ? "O" : "X")
+        }
+        
     }
     
     validarTab()
