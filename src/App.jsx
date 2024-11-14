@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import './App.css'
 import JogadoresBoard from './components/JogadoresBoard'
 import Tabuleiro from './components/Tabuleiro'
 import Winner from './components/winner'
@@ -31,20 +30,22 @@ function App() {
     setWin(false)
   }
 
+  let winnerStyle = "absolute inset-0 w-full h-full bg-black/70 rounded-lg flex flex-col items-center justify-center text-center z-10"
+
    
   return (
-    <div className='app'>
+    <div className="relative bg-[#f0f0f0] p-5 border border-gray-300 rounded-lg">
         <JogadoresBoard player={player} players={players} setPlayers={setPlayers}/>
         <Tabuleiro player={player} setPlayer={setPlayer} setWin={setWin} tab={tab} setTab={setTab} setTabCheio={setTabCheio}/>
         
         {
           win &&
-          <Winner player={player === "O" ? "Jogador 1" : "Jogador 2"}  resetTab={resetarTabuleiro}/>
+          <Winner className={winnerStyle} player={player === "O" ? "Jogador 1" : "Jogador 2"}  resetTab={resetarTabuleiro}/>
         }
 
         {
           tabCheio && !win &&
-          <TabCheio resetTab={resetarTabuleiro}/>
+          <TabCheio className={winnerStyle} resetTab={resetarTabuleiro}/>
         }
     </div>
  

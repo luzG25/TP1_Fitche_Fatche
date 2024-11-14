@@ -5,10 +5,10 @@ function NameBoard({players, index, setPlayers, ...props})
     return (
         <div>
             <div className={props.className}>
-                <p className="name">
+                <p className="ml-5">
                     {players[index].nome}  
                 </p>
-                <p className="sign">
+                <p className="mr-2.5">
                     {players[index].sign}
                 </p>
             </div>

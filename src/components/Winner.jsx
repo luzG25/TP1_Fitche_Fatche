@@ -1,10 +1,10 @@
 
-function Winner({player,resetTab, ...props})
+function Winner({className, player,resetTab, ...props})
 {
 
     return(
 
-        <div className="winner">
+        <div className={className}>
             <p> {player} Ganhou </p>
             <p>
                 <button onClick={(event) => {resetTab()}}>Resetar Tabuleiro</button>

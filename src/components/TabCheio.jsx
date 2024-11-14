@@ -1,8 +1,8 @@
-function TabCheio({resetTab, ...props})
+function TabCheio({className, resetTab, ...props})
 {
     return (
         <div>
-             <div className="winner">
+             <div className={className}>
             <h2> Empate </h2>
             <p>Tabuleiro Cheio</p>
             <p>

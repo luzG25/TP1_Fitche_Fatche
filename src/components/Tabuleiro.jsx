@@ -1,5 +1,4 @@
 import Cubo from "./cubo"
-import "./Cubo.css" 
 import { useState } from 'react'
 
 function Tabuleiro({tab, setTab, setTabCheio,...props})
@@ -65,10 +64,10 @@ function Tabuleiro({tab, setTab, setTabCheio,...props})
     validarTab()
 
     return (
-        <div className="tabuleiro">
+        <div>
 
             {tab.map((linha, index) => (
-                <div key={index} className="row">
+                <div key={index} className="flex gap-2.5">
                     {linha.map((item, i) => (
                         <Cubo marker={item} handleClick={handleClick} col={i} line={index} player={props.player}/>
                     ))}
