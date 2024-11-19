@@ -9,9 +9,9 @@ function App() {
 
 
   let tabuleiro = [
-    [[""], [""], [""]],
-    [[""], [""], [""]], 
-    [[""], [""], [""]]
+    ["", "", ""],
+    ["", "", ""], 
+    ["", "", ""]
   ]
 
   const [players, setPlayers] = useState([
